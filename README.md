@@ -8,10 +8,13 @@ This is a frontend HTML/CSS clone of the **DataResell user dashboard**, built fo
 - Mobile-responsive design
 - Editable and lightweight codebase
 
+## 🎨 Demo
+Website Demo: [Dataresell](https://favouradjenuvurhe.github.io/Dataresell-clone/)
+
 ## 📹 YouTube Video
 Watch the full build: [YouTube Video Link](#)
 
 ## 🚀 Getting Started
 1. Clone the repo:
 ```bash
-git clone https://github.com/yourusername/dataresell-dashboard-clone
+git clone https://github.com/favouradjenuvurhe/Dataresell-clone/
