@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Top-up Wallet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Vue.js CDN -->
+    <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.prod.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #000; /* Mimics background blur */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="h-screen flex items-end justify-center">
+      <!-- Modal -->
+      <div
+        class="w-full rounded-t-[30px] bg-white shadow-lg p-5 pt-3 pb-10"
+        style="min-height: 70vh"
+      >
+        <!-- Notch Indicator -->
+        <div class="w-10 h-1.5 bg-gray-300 rounded-full mx-auto mb-3"></div>
+
+        <!-- Header -->
+        <h2 class="text-xl font-bold text-gray-900">Top-up Wallet</h2>
+        <p class="text-sm mt-1 text-gray-800 font-medium">
+          Choose a payment method
+        </p>
+
+        <!-- Info Box -->
+        <div
+          class="text-sm text-blue-800 bg-blue-100 border border-blue-300 px-4 py-3 rounded-xl mt-4"
+        >
+          NB: A fee of 20 will be charged on any Payment made
+        </div>
+
+        <!-- Payment Options -->
+        <div class="mt-6 space-y-4">
+          <button
+            class="w-full flex items-center justify-between px-4 py-4 bg-white rounded-xl shadow-sm border border-gray-200"
+          >
+            <span class="text-blue-800 font-medium text-base">Moniepoint</span>
+            <span class="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center">
+              <strong>M</strong>
+            </span>
+          </button>
+
+          <button
+            class="w-full flex items-center justify-between px-4 py-4 bg-white rounded-xl shadow-sm border border-gray-200"
+          >
+            <span class="text-blue-800 font-medium text-base">Paystack</span>
+            <i data-lucide="credit-card" class="text-blue-900"></i>
+          </button>
+
+          <button
+            class="w-full flex items-center justify-between px-4 py-4 bg-white rounded-xl shadow-sm border border-gray-200"
+          >
+            <span class="text-blue-800 font-medium text-base">Bank Transfer</span>
+            <i data-lucide="banknote" class="text-blue-900"></i>
+          </button>
+
+          <button
+            class="w-full flex items-center justify-between px-4 py-4 bg-white rounded-xl shadow-sm border border-gray-200"
+          >
+            <span class="text-blue-800 font-medium text-base">Opay Wallet</span>
+            <i data-lucide="wallet" class="text-green-600"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        mounted() {
+          lucide.createIcons();
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
